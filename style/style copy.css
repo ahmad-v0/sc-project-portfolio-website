@@ -1,0 +1,362 @@
+/* import font family  */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/* variable section  */
+:root {
+    /* color section  */
+    --black: #151515;
+    --green: #4EE1A0;
+    --dark-grey: #242424;
+    --grey: #d9d9d9;
+    --white: #FFF;
+
+    /* typography section  */
+    --fs-heading-xl: 5.5rem;
+    --lh-heading-xl: 5.5rem;
+    --ls-heading-xl: -0.15625rem;
+
+    --fs-heading-l: 3rem;
+    --lh-heading-l: 3.5rem;
+    --ls-heading-l: -0.09375rem;
+
+    --fs-heading-m: 1.5rem;
+    --lh-heading-m: 2rem;
+
+    --fs-body-l: 1.125rem;
+    --lh-body-l: 1.75rem;
+}
+
+/* discarding default properties  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* common properties for ul  */
+ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.125rem;
+    color: var(--grey);
+}
+
+/* commom properties for all anchor tags  */
+a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+/* properties for body  */
+body {
+    font-family: "Space Grotesk", serif;
+    color: var(--white);
+    width: 100%;
+    height: auto;
+}
+
+/* properties for main  */
+main {
+    background-color: var(--black);
+}
+
+.hero {
+    /* width: 100%; */
+    position: relative;
+    /* display: flex; */
+    display: grid;
+    /* grid-template-columns: repeat(28, 2.5rem); */
+    grid-template-columns: repeat(28, 1fr);
+    grid-template-rows: repeat(8, 6.5rem);
+    gap: 1px;
+    border-bottom: 1px solid var(--grey);
+}
+
+/* common properties for banner  */
+.bnr {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    /* position: absolute; */
+}
+
+.bnr-title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.bnr-icons i {
+    padding-right: 1.875rem;
+    font-size: 2rem;
+}
+
+.main-bnr {
+    /* top: 0; */
+    grid-column: 1/29 ;
+    grid-row: 1/auto;
+    z-index: 1;
+}
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 44.125rem;
+    grid-column: 1/20;
+    grid-row: 3/auto;
+    z-index: 1;
+    /* position: relative; */
+}
+
+.hero-img {
+    width: 27.8125rem;
+    height: auto;
+    grid-column: 16 / 29;
+    grid-row: 1/4;
+    margin-bottom: 6.5rem;
+    justify-self: end;
+}
+
+.hero-img-fc {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 445/720;
+}
+
+.ring-vector-circle {
+    grid-column: 17/auto;
+    grid-row: 6/auto;
+}
+
+.ring-set {
+    width: 33.125rem;
+    position: absolute;
+}
+
+.ring-set-hero {
+    left: -16%;
+    top: 15%;
+}
+
+/* common properties for section title, section detaisl  */
+.section-title {
+    /* font-size: var(--fs-heading-xl); */
+    font-size: 5.5rem;
+    line-height: var(--lh-heading-xl);
+    letter-spacing: var(--ls-heading-xl);
+}
+
+.section-details {
+    color: var(--grey);
+    font-size: var(--fs-body-l);
+    line-height: var(--lh-body-l);
+}
+
+/* common properties for button  */
+.btn {
+    width:fit-content;
+    height: fit-content;
+    padding: 1rem 0;
+    font-size: var(--fs-body-l);
+    border: none;
+    border-bottom: 1px solid var(--green);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.experience,
+.projects {
+    padding-bottom: 8.75rem;
+}
+
+/* properties for project section  */
+.experience {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.experience-tile {
+    padding-top: 4rem;
+    display: grid;
+    gap: 0.875rem;
+}
+
+.experience-tile-title {
+    font-size: var(--fs-heading-l);
+    font-weight: 700;
+    line-height: var(--lh-heading-l);
+    letter-spacing: var(--ls-heading-l);
+}
+
+.ring-set-experience {
+    top: 50%;
+    right: -35%;
+    transform: scaleX(-1);
+}
+
+/* properties for project section  */
+.projects {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.875rem 4.375rem;
+    padding-top: 10.5rem;
+}
+
+.project-txt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.project-tile-title {
+    text-transform: uppercase;
+    margin: 1.25rem 0 0.5rem 0;
+    font-size: var(--fs-heading-m);
+    font-weight: 700;
+}
+
+
+/* common properties for project tiles  */
+.projects-tile {
+    width: 33.75rem;
+    height: auto;
+    position: relative;
+}
+
+.projects-tile img,
+.project-tile-btns {
+    width: 100%;
+    aspect-ratio: 540/400;
+}
+
+.project-tile-btns {
+    position: absolute;
+    top: 0;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    display: none;
+}
+
+.btn-project-tile {
+    background-color: transparent;
+}
+
+
+/* common properties for main, footer  */
+.main-wraper,
+.footer-wraper{
+    padding: 0 10.3125rem;
+    margin: 0 auto;
+    max-width: 90rem;
+    height: auto;
+    overflow: hidden; /* hides/clipes the content outside container  */
+}
+
+/* beginning of properties for footer  */
+footer {
+    background-color: var(--dark-grey);
+}
+
+/* properties for footer contact section  */
+.footer-contact {
+    position: relative;
+    padding: 5.25rem 0 10.75rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 13.75rem;
+    border-bottom: 1px solid;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 2rem 1.5rem 1rem;
+    text-transform: uppercase;
+    background-color: var(--dark-grey);
+    border: none;
+    border-bottom: 2px solid var(--grey);
+    font-size: var(--fs-body-l);
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    font-family: "Space Grotesk", serif;
+}
+
+.btn-contact {
+    position: absolute;
+    right: 0;
+    bottom: -20%;
+    background-color: var(--dark-grey);
+}
+
+.ring-set-contact {
+    bottom: 10%;
+    left: -33%;
+}
+
+/* end of properties for footer  */
+
+/* beginning of interactive properties section  */
+a:hover,
+a:hover button {
+    color: var(--green);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.projects-tile:hover img {
+    opacity: 30%;
+    transition: opacity 0.3s ease;
+}
+
+.projects-tile:hover .project-tile-btns {
+    display: flex;
+}
+
+
+/* end of interactive properties section  */
+
+/* Responsive design section  */
+/* for desktop and large screens  */
+@media only screen and (min-width: 992px) {
+    .main-wraper,
+    .footer-wraper{
+        padding: 0 10.3125rem;
+        max-width: 90rem;
+    }
+
+}
+
+/* for tablet  */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    html {
+        font-size: 13px;
+    }
+    main,
+    footer {
+        width: 100%;
+    }
+    .main-wraper,
+    .footer-wraper{
+        padding: 0 2rem;
+    }
+}
